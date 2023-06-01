@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 500px;
   text-align: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 25px;
   border: 3px solid #333340;
 background: linear-gradient(225deg, rgb(205, 210, 209) 44%, rgb(73, 77, 77));;
 -webkit-box-shadow: 7px 11px 19px -4px rgba(0,0,0,0.75);
