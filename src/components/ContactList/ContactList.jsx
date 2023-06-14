@@ -1,6 +1,6 @@
 import ContactItem from 'components/ContactIteam';
 import { useSelector } from 'react-redux';
-import { getContacts } from 'redux/contactsSelectors';
+import { getContacts } from 'redux/filterSlice';
 
 import { List } from './ContactList.styled';
 
