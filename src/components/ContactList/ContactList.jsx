@@ -16,7 +16,8 @@ function ContactList() {
 
     return (
         <List>
-            {filteredContacts.map(({ id, inputName, inputNumber }) => (
+            {filteredContacts &&
+                filteredContacts.map(({ id, inputName, inputNumber }) => (
                 <ContactItem
                     key={id}
                     id={id}
