@@ -1,23 +1,31 @@
 import ContactItem from 'components/ContactIteam';
 import { useSelector } from 'react-redux';
-import { getContacts } from 'redux/filterSlice';
-
 import { List } from './ContactList.styled';
 
+
+import { getContacts, getFilter } from 'redux/selector';
+import { getFilteredContacts } from 'redux/selector';
+
 function ContactList() {
-     const contacts = useSelector(getContacts);
+
+    const contacts = useSelector(getContacts);
+    const filter = useSelector(getFilter);
+
+
+    const filteredContacts = getFilteredContacts(filter, contacts);
+
     return (
         <List>
-            {contacts.map(({ id, name, number }) => (
+            {filteredContacts.map(({ id, inputName, inputNumber }) => (
                 <ContactItem
                     key={id}
                     id={id}
-                    name={name}
-                    number={number}
+                    name={inputName}
+                    number={inputNumber}
                 />
             ))}
         </List>
     );
 };
 
-export default ContactList;
+export default ContactList
