@@ -13,6 +13,7 @@ function ContactList() {
 
 
     const filteredContacts = getFilteredContacts(filter, contacts);
+    console.log(filteredContacts);
 
     return (
         <List>

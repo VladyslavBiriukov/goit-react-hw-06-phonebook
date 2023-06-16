@@ -19,7 +19,7 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (contacts.some(contact => contact.name === inputName)) {
+    if (contacts.some(contact => contact.inputName === inputName)) {
       toast.success(`${inputName} is already in contacts`)
     } else {
       dispatch(addContact({ id: nanoid(), inputName, inputNumber }));
